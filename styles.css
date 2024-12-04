@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --purple: hsl(281, 83%, 54%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(./assets/images/background-pattern-mobile.svg) no-repeat top center, linear-gradient(to bottom, var(--Grayish-purple) 30%, var(--Light-pink) 30%);
+    background-size: contain;
+}
+
+
+
+
+
+main {
+    width: 330px;
+    max-width: 375px;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 5px var(--Dark-purple);
+    
+
+    .header {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .star-image {
+            margin-right: 20px;
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .faq-body {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+
+            .question {
+                width: 80%;
+                font-weight: 700;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--purple);
+                }
+            }
+
+            #plus-btn {
+                border: 0;
+                background: none;
+                cursor: pointer;
+                
+            }
+        }
+
+        .faq-answer {
+            font-weight: 400;
+            font-size: .91rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    .faq-body:not(:last-child) {
+        border-bottom: 2px solid var(--Light-pink);
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        background: url(./assets/images/background-pattern-desktop.svg) no-repeat top center, linear-gradient(to bottom, var(--Grayish-purple) 40%, var(--Light-pink) 40%);
+        background-size: contain;
+    }
+
+    main {
+        width: 500px;
+        max-width: 500px;
+        
+    }
+}
+
+.disabled {
+    display: none;
+}
